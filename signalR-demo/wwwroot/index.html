@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>SignalR Demo</title>
+</head>
+<body>
+
+<button onclick="ping()">ping</button>
+<button onclick="client.connect()">connect</button>
+<button onclick="client.disconnect()">disconnect</button>
+<button onclick="send()">send</button>
+<button onclick="getConnections()">get connections</button>
+
+<hr>
+<div>
+    <strong>ping:</strong> will try to ping the server, if disconnected will try to connect and then retry the ping
+</div>
+
+<script src="service-worker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/9.0.6/signalr.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
